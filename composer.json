@@ -1,0 +1,24 @@
+{
+  "name": "drop/module-better-logout",
+  "description": "Drop Better Logout",
+  "license": "proprietary",
+  "authors": [
+    {
+      "email": "e.pascucci@drop.it",
+      "name": "Enrico Pascucci"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "magento/module-customer":">=101"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Drop\\BetterLogout\\": ""
+    }
+  }
+}

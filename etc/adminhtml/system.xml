@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="betterlogout" translate="label" sortOrder="10">
+            <label>Better Logout</label>
+        </tab>
+        <section id="betterlogout" translate="label" sortOrder="100" showInDefault="1">
+            <class>separator-top</class>
+            <label>Better Logout</label>
+            <tab>drop</tab>
+            <resource>Drop_BetterLogout::BetterLogoutConfig</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Select in which page the user should be redirect after the logout</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="logoutlanding" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Select the landing page</label>
+                    <source_model>Drop\BetterLogout\Model\WhereToLand</source_model>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
